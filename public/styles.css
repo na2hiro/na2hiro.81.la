@@ -421,6 +421,7 @@ kbd {
     }
 }
 
+ul.unstyled {padding: 0}
 ul.unstyled li {
     display: inline-block;
     margin: 0 10px;
@@ -431,4 +432,17 @@ a {
 }
 a:hover {
     text-decoration: underline;
+}
+
+
+.with-icon:after {
+    margin-left: 4px;
+    content: " ";
+    display: inline-block;
+    background-image: url(/twittericon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    vertical-align: middle;
 }

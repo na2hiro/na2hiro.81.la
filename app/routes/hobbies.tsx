@@ -1,4 +1,4 @@
-export default function Hobbies (){
+export default function Hobbies() {
     return (
         <>
 
@@ -31,16 +31,20 @@ export default function Hobbies (){
                 <li>外貨収集
 
                     <ul>
-                        <li><a href="https://twitter.com/na2hiro/status/598105338420727808">旅行した国の紙幣・貨幣を集め，額縁に入れて対数展示</a>
+                        <li><a
+                            href="https://twitter.com/na2hiro/status/598105338420727808">旅行した国の紙幣・貨幣を集め，額縁に入れて対数展示</a>
 
                             <ul>
                                 <li>もはや外貨預金</li>
-                            </ul></li>
+                            </ul>
+                        </li>
                         <li><a href="https://twitter.com/na2hiro/status/604645446196170752">初任給でジンバブエ・ドルを購入</a>
-
                             <ul>
-                                <li><a href="https://twitter.com/na2hiro/status/605023753848897536">ジンバブエ・ドルを対数展示してみた</a></li>
-                            </ul></li>
+                                <li><a
+                                    href="https://twitter.com/na2hiro/status/605023753848897536">ジンバブエ・ドルを対数展示してみた</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li><a href="https://twitter.com/na2hiro/status/880084529846689794">5000兆ペンゲー欲しい!</a></li>
                     </ul></li>
             </ul>
