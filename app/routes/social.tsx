@@ -17,6 +17,7 @@ export default function Social() {
                     <RemixableScript src="https://unpkg.com/github-card@1.2.1/dist/widget.js"/>
                 </li>
                 <li><h3>hatenablog: <a href={"https://na2hiro.hatenablog.com/"}>na2hiro</a></h3></li>
+                <li><h3>scrapbox: <a href={"https://scrapbox.io/na2hiro"}>na2hiro</a></h3></li>
                 <li><h3>discord: na2hiro#2460</h3></li>
                 <li><h3>skype: na2hiro</h3></li>
                 <li><h3>gmail: na2hiro</h3></li>
