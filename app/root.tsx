@@ -20,19 +20,17 @@ export const links: LinksFunction = () => {
     ];
 };
 const BoldNavLink = ({to, children}) => {
-    return <NavLink style={({isActive})=>({fontWeight: isActive?"bold":"normal"})} to={to}>{children}</NavLink>;
+    return <NavLink style={({isActive}) => ({fontWeight: isActive ? "bold" : "normal"})} to={to}>{children}</NavLink>;
 }
 
 const TwitterFollow = () => {
-    return(
-        <>
-            <div style={{display: "inline-flex", marginLeft: "8px", verticalAlign: "middle"}}>
-        <a href="https://twitter.com/na2hiro?ref_src=twsrc%5Etfw" className="twitter-follow-button" data-size="large"
-           data-show-count="false" style={{display: "none"}}>Follow @na2hiro</a>
+    return (
+        <div style={{display: "inline-flex", marginLeft: "8px", verticalAlign: "middle"}}>
+            <a href="https://twitter.com/na2hiro?ref_src=twsrc%5Etfw" className="twitter-follow-button"
+               data-size="large"
+               data-show-count="false" style={{display: "none"}}>Follow @na2hiro</a>
             <RemixableScript src="https://platform.twitter.com/widgets.js"/>
-
-            </div>
-        </>
+        </div>
     )
 }
 
@@ -46,8 +44,8 @@ export default function App() {
             <Links/>
         </head>
         <body>
-        <h1><NavLink to="/" className={({isActive})=>isActive?"":"with-icon"}>About na2hiro</NavLink>
-            <TwitterFollow />
+        <h1><NavLink to="/" className={({isActive}) => isActive ? "" : "with-icon"}>About na2hiro</NavLink>
+            <TwitterFollow/>
         </h1>
         <ul className="unstyled">
             <li><BoldNavLink to="/products">Products</BoldNavLink></li>
