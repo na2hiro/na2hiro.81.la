@@ -1,5 +1,4 @@
 import {
-    Link,
     Links, LinksFunction,
     LiveReload,
     Meta, NavLink,
@@ -9,6 +8,7 @@ import {
 } from "remix";
 import type {MetaFunction} from "remix";
 import {RemixableScript} from "~/components/RemixableScript";
+import {FC} from "react";
 
 export const meta: MetaFunction = () => {
     return {title: "na2hiro"};
@@ -19,7 +19,7 @@ export const links: LinksFunction = () => {
         {rel: "stylesheet", href: "/styles.css"}
     ];
 };
-const BoldNavLink = ({to, children}) => {
+const BoldNavLink: FC<{ to: string }> = ({to, children}) => {
     return <NavLink style={({isActive}) => ({fontWeight: isActive ? "bold" : "normal"})} to={to}>{children}</NavLink>;
 }
 
