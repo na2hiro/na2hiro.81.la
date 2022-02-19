@@ -1,7 +1,8 @@
 node_modules
 /.cache
-/netlify/functions/server/build
+/build
+/dist
 /public/build
-/.netlify
+/.mf
 /.idea
 .DS_Store

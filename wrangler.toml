@@ -1,0 +1,18 @@
+name = "na2hiro-81-la"
+type = "javascript"
+
+zone_id = ""
+account_id = ""
+route = ""
+workers_dev = true
+compatibility_date = "2022-02-19"
+
+[site]
+bucket = "./public"
+entry-point = "."
+
+[build]
+command = "npm run build"
+
+[build.upload]
+format="service-worker"
