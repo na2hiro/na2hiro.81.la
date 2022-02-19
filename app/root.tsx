@@ -1,4 +1,5 @@
 import {
+    HeadersFunction,
     Links, LinksFunction,
     LiveReload,
     Meta, NavLink,
