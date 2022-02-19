@@ -10,8 +10,8 @@ export default function Skills() {
             <h3>Frameworks</h3>
             <p>Webが好き</p>
             <ul>
+                <li>Remix 💿</li>
                 <li>React.js</li>
-                <li>Remix 入門中</li>
                 <li>Spring Framework</li>
             </ul>
 

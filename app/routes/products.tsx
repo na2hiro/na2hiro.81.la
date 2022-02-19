@@ -27,6 +27,7 @@ export default function Products () {
             <h3 id="toc_6">Open-source Activities</h3>
 
             <ul>
+                <li><a href="https://github.com/na2hiro/remix-auth-twitter" style={{fontFamily: "monospace"}}>remix-auth-twitter</a>: Remixのtwitter認証プラグイン</li>
                 <li><a href="https://github.com/na2hiro/Kifu-for-JS">Kifu for JS</a>: Java/Flash不要の将棋棋譜プレイヤー</li>
                 <li><a href="https://github.com/na2hiro/json-kifu-format">JSON棋譜フォーマット(JKF)</a>: 汎用的な棋譜フォーマット</li>
             </ul>
