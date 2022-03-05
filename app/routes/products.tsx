@@ -1,56 +1,107 @@
 import {commonHeaders} from "~/components/headers";
-
-// TODO: remove after https://github.com/remix-run/remix/issues/1091
-export function loader() {
-    return {};
-}
+import {A, H1, H2, H3, Section, Ul} from "~/components/Elements";
 
 export const headers = commonHeaders;
 
-export default function Products () {
-    return(
+export default function Products() {
+    return (
         <>
-            <h2>Products</h2>
+            <H1>Products</H1>
             <p>最近ではないものには年号を付けています．だいたい新しい順．</p>
 
-            <h3 id="toc_5">Services</h3>
+            <Section>
+                <H2>Apps</H2>
+                <Section>
+                    <div className="flex flex-wrap gap-6 -ml-8 lg:ml-0 my-4 justify-center xl:justify-start">
+                        <a href="https://shogitter.com" target="_blank"
+                           className="card  card-compact w-96 bg-base-100 shadow-md hover:shadow-xl transition-shadow">
+                            <figure className="bg-gray-100"><img src="/shogitter.png"
+                                                                 className="aspect-[800/450] w-full" aria-hidden/>
+                            </figure>
+                            <div className="card-body">
+                                <h2 className="card-title">将棋ったー</h2>
+                                <p>100以上の変則将棋ルールが楽しめるオンライン対局サイト</p>
+                            </div>
+                        </a>
+                        <div onClick={() => open("https://shogitter.com/rule/108", "_blank")}
+                           className="card card-compact w-96 bg-base-100 shadow-md hover:shadow-xl transition-shadow cursor-pointer">
+                            <figure className="bg-gray-100"><img src="/quantum-shogi.png"
+                                                                 className="aspect-[800/450] w-full" alt="Shoes"/>
+                            </figure>
+                            <div className="card-body">
+                                <h2 className="card-title"><a href="https://shogitter.com/rule/108" target="_blank">量子将棋</a></h2>
+                                <p>重ね合わせの原理を用いた斬新な将棋</p>
+                            <Ul>
+                                <li>バズった: <A href="http://nlab.itmedia.co.jp/nl/articles/1310/29/news097.html" className="italic" onClick={(e)=>e.stopPropagation()}>動かすまで何の駒かは確定しない
+                                    可能性がヤバすぎるゲーム「量子将棋」が話題に - ねとらぼ</A></li>
+                                <li>取材を受けた: <A
+                                    href="http://www.chunichi.co.jp/article/junior/naruhodo/201311/CK2013112402000185.html"
+                                    className="italic" onClick={(e)=>e.stopPropagation()}>将棋のルーツ分かる「酔象」:なるほどランド:中日新聞(CHUNICHI Web)</A></li>
+                            </Ul>
+                            </div>
+                        </div>
+                        <a href="https://doubutsushogiwars.heroz.jp" target="_blank"
+                           className="card  card-compact w-96 bg-base-100 shadow-md hover:shadow-xl transition-shadow">
+                            <figure className="bg-yellow-50"><img src="/doubutsu.png"
+                                                                  className="aspect-[580/290] w-full"
+                                                                  aria-hidden/></figure>
+                            <div className="card-body">
+                                <h2 className="card-title">どうぶつしょうぎウォーズ</h2>
+                                <p>HEROZにてバイト</p>
+                            </div>
+                        </a>
+                        <a href="https://toolbox.shogitter.com/" target="_blank"
+                           className="card card-compact w-96 bg-base-100 shadow-md hover:shadow-xl transition-shadow">
+                            <figure className="bg-blue-100 h-48"><img src="/shogi-toolbox.png"
+                                                                      className="aspect-[800/450] w-full"
+                                                                      aria-hidden/></figure>
+                            <div className="card-body">
+                                <h2 className="card-title">Shogi Toolbox!</h2>
+                                <p>将棋好きのためのツール集です（予定）</p>
+                            </div>
+                        </a>
+                    </div>
+                </Section>
+            </Section>
 
-            <ul>
-                <li><a href="http://doubutsushogiwars.heroz.jp">どうぶつしょうぎウォーズ</a>: HEROZにてバイト</li>
-                <li><a href="http://shogitter.com">将棋ったー</a>(2010-): 100以上の変則将棋ルールが楽しめるオンライン対局サイト
+            <Section>
+                <H2>Open Source Software</H2>
+                <Section>
+                    <H3>Author / Maintainer</H3>
+                    <Section>
+                        <div className="flex flex-wrap gap-6 items-start -ml-12 lg:ml-0 overflow-x-auto">
+                            <object type="image/svg+xml" className="shadow-md hover:shadow-xl transition-shadow w-[442px]"
+                                    data="https://gh-card.dev/repos/na2hiro/remix-auth-twitter.svg?link_target=_blank"/>
+                            <object type="image/svg+xml" className="shadow-md hover:shadow-xl transition-shadow w-[442px]"
+                                    data="https://gh-card.dev/repos/na2hiro/Kifu-for-JS.svg?link_target=_blank"/>
+                            <object type="image/svg+xml" className="shadow-md hover:shadow-xl transition-shadow w-[442px]"
+                                    data="https://gh-card.dev/repos/na2hiro/json-kifu-format.svg?link_target=_blank"/>
+                        </div>
+                    </Section>
+                </Section>
 
-                    <ul>
-                        <li><a href="http://shogitter.com/rule/108">量子将棋</a>(2013-): 重ね合わせの原理を用いた斬新な将棋
+                <Section>
+                    <H3>Contributor</H3>
+                    <Section>
+                        <div className="flex flex-wrap gap-6 items-start -ml-12 lg:ml-0 overflow-x-auto">
+                            <object type="image/svg+xml" className="shadow-md hover:shadow-xl transition-shadow w-[442px]"
+                                    data="https://gh-card.dev/repos/remix-run/remix.svg?link_target=_blank"/>
+                        </div>
+                    </Section>
+                </Section>
+            </Section>
 
-                            <ul>
-                                <li>バズった: <a href="http://nlab.itmedia.co.jp/nl/articles/1310/29/news097.html">動かすまで何の駒かは確定しない　可能性がヤバすぎるゲーム「量子将棋」が話題に - ねとらぼ</a></li>
-                                <li>取材を受けた: <a href="http://www.chunichi.co.jp/article/junior/naruhodo/201311/CK2013112402000185.html">将棋のルーツ分かる「酔象」:なるほどランド:中日新聞(CHUNICHI Web)</a></li>
-                            </ul></li>
-                    </ul></li>
-            </ul>
-
-            <h3 id="toc_6">Open-source Activities</h3>
-
-            <ul>
-                <li><a href="https://github.com/na2hiro/remix-auth-twitter" style={{fontFamily: "monospace"}}>remix-auth-twitter</a>: Remixのtwitter認証プラグイン</li>
-                <li><a href="https://github.com/na2hiro/Kifu-for-JS">Kifu for JS</a>: Java/Flash不要の将棋棋譜プレイヤー</li>
-                <li><a href="https://github.com/na2hiro/json-kifu-format">JSON棋譜フォーマット(JKF)</a>: 汎用的な棋譜フォーマット</li>
-            </ul>
-
-            <h3 id="toc_7">Misc. Products</h3>
-
-            <ul>
-                <li><a href="http://monadianity.81.la/">モナド教</a>: モナドに基づいた天国を有する宗教</li>
-                <li><a href="http://recruit-jinji.jp/code_fes2014/">CODE FESTIVAL 2014</a>のリレー順位表</li>
-            </ul>
-
-            <h3 id="toc_8">Other Websites</h3>
-
-            <ul>
-                <li><s><a href="http://na2hiro.blogspot.jp">na2hiro&#39;s Devlog(仮)</a>: あまり書いてない開発ブログ</s></li>
-                <li><a href="http://shostakovi.ch">Shostakovi.ch</a>(2009-): ソ連の作曲家ショスタコーヴィチが映画音楽を担当した映画と自ら翻訳した字幕を公開</li>
-                <li><a href="http://81.la">将棋のページ</a>(2001?-): スーパー正男というゲームの投稿サイト．保有ステージ数5000以上．</li>
-            </ul>
+            <Section>
+                <H2>Miscellaneous</H2>
+                <Ul>
+                    <li><A href="http://monadianity.81.la/">モナド教</A>: モナドに基づいた天国を有する宗教</li>
+                    <li><A href="http://recruit-jinji.jp/code_fes2014/">CODE FESTIVAL 2014</A>のリレー順位表</li>
+                    <li><A href="http://shostakovi.ch">Shostakovi.ch</A> (2009-):
+                        ソ連の作曲家ショスタコーヴィチが映画音楽を担当した映画と自ら翻訳した字幕を公開
+                    </li>
+                    <li><A href="http://81.la">将棋のページ</A> (2001?-): スーパー正男というゲームの投稿サイト．保有ステージ数5000以上．</li>
+                </Ul>
+            </Section>
         </>
     )
 }
